@@ -14,7 +14,8 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Restore dependencies
-      run: dotnet restore JRunner.sln
+      working-directory: J-Runner
+      run: dotnet restore JRunner.csproj
     - name: Build
       run: dotnet build
     - name: Test
