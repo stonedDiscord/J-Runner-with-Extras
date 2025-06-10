@@ -15,7 +15,7 @@ jobs:
         dotnet-version: 8.0.x
     - name: Download NuGet Packages
       run: |
-        nuget install packages.config
+        nuget install packages.config -OutputDirectory packages
     - name: Restore dependencies
       working-directory: J-Runner
       run: |
