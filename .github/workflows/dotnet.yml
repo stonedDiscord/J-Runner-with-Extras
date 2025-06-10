@@ -15,7 +15,9 @@ jobs:
         dotnet-version: 8.0.x
     - name: Restore dependencies
       working-directory: J-Runner
-      run: dotnet restore JRunner.csproj
+      run: |
+        dotnet restore JRunner.csproj
+        dotnet add package Costura.Fody --version 5.7.0
     - name: Build
       run: dotnet build
     - name: Test
